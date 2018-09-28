@@ -43,7 +43,8 @@ cp /config/php/php.ini /etc/php7/php.ini
 
 # delete lock file if exists
 [[ -e /config/rtorrent/rtorrent_sess/rtorrent.lock ]] && \
-	rm /config/rtorrent/rtorrent_sess/rtorrent.lock
+	rm /config/rtorrent/rtorrent_sess/rtorrent.lock && \
+	echo "WARN: rtorrent lock file removed"
 
 # permissions
 chown abc:abc \
